@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+/* Custom styles for the expense analyzer */
+.recharts-tooltip-wrapper {
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-tooltip {
+  @apply bg-white p-3 rounded-lg shadow-lg border border-gray-200;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Date input styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+/* Smooth scrolling for the transaction table */
+.transaction-table-container {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transaction-table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.transaction-table-container::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
 }
